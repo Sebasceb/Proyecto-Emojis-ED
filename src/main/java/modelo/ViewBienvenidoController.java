@@ -79,7 +79,8 @@ public class ViewBienvenidoController implements Initializable {
    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        aggFondo_Emoji();
+        
+        
     
         AggnodoyAciones();
        
@@ -90,19 +91,19 @@ public class ViewBienvenidoController implements Initializable {
         
     }
 
-public void aggFondo_Emoji(){
-    
-    String s= "src\\main\\resources\\Mas\\gifFondo.gif";
-    
-        try {
-            FileInputStream fil = new FileInputStream(s);
-            Image i= new Image(fil);
-            fondo.setImage(i);
-        } catch (FileNotFoundException ex) {
-            ex.printStackTrace();
-        }
-  
-}  
+//public void aggFondo_Emoji(){
+//    
+//    String s= "src\\main\\resources\\Mas\\gifFondo.gif";
+//    
+//        try {
+//            FileInputStream fil = new FileInputStream(s);
+//            Image i= new Image(fil);
+//            fondo.setImage(i);
+//        } catch (FileNotFoundException ex) {
+//            ex.printStackTrace();
+//        }
+//  
+//}  
 
 public void asignarEmojis_AlaLista(){
     int contador=1;

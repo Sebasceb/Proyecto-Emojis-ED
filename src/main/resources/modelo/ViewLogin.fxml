@@ -13,47 +13,47 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 40;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.ViewLoginController">
    <children>
-      <VBox alignment="CENTER" prefWidth="427.0" style="-fx-background-color: #FFFFFF;" HBox.hgrow="ALWAYS">
+      <VBox alignment="CENTER" prefWidth="427.0" style="-fx-background-color: #F7B026; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
          <children>
-            <Label text="Iniciar Sesion">
+            <Label style="-fx-background-radius: 5; -fx-background-color: #FBE54D; -fx-border-style: sd;" text="Iniciar Sesion" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
                <font>
-                  <Font name="Yu Gothic Medium" size="40.0" />
+                  <Font name="Franklin Gothic Demi Italic" size="40.0" />
                </font>
             </Label>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
                   <Label text="Usuario">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="Franklin Gothic Demi" size="20.0" />
                      </font>
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField fx:id="txtUser" onKeyTyped="#eventKey">
+                  <TextField fx:id="txtUser" onKeyTyped="#eventKey" style="-fx-background-radius: 10; -fx-background-color: #CFCCCC;">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </TextField>
                   <Label text="Contraseña">
                      <font>
-                        <Font size="20.0" />
+                        <Font name="Franklin Gothic Demi" size="20.0" />
                      </font>
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <PasswordField fx:id="txtClave" onKeyTyped="#eventKey">
+                  <PasswordField fx:id="txtClave" onKeyTyped="#eventKey" style="-fx-background-radius: 10; -fx-background-color: #CFCCCC;">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </PasswordField>
-                  <Button fx:id="btnIngresar" alignment="CENTER" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#evenAction" text="Ingresar">
+                  <Button fx:id="btnIngresar" alignment="CENTER" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#evenAction" style="-fx-background-radius: 10;" text="Ingresar">
                      <font>
-                        <Font size="18.0" />
+                        <Font name="Franklin Gothic Heavy" size="18.0" />
                      </font>
                      <VBox.margin>
                         <Insets top="20.0" />
@@ -66,11 +66,11 @@
             </VBox>
          </children>
       </VBox>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="427.0" style="-fx-background-color: #3968BF; -fx-background-radius: 40;" HBox.hgrow="ALWAYS">
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="427.0" style="-fx-background-color: #F9A935; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
          <children>
-            <ImageView fitHeight="312.0" fitWidth="429.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+            <ImageView fitHeight="450.0" fitWidth="429.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
                <image>
-                  <Image url="@../../java/image/emojiInicio.png" />
+                  <Image url="@../Mas/Portada%20Emojis.png" />
                </image>
             </ImageView>
          </children>

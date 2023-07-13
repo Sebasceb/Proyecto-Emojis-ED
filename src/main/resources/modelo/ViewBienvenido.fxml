@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -10,52 +11,61 @@
 
 <BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="742.0" style="-fx-background-color: #FAF6D4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.ViewBienvenidoController">
    <top>
-      <HBox prefHeight="59.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+      <HBox prefHeight="59.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="55.0" fitWidth="331.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Mas/Titutlo.png" />
+               </image>
+            </ImageView>
+         </children></HBox>
    </top>
    <left>
-      <HBox prefHeight="363.0" prefWidth="321.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="419.0" prefWidth="235.0" BorderPane.alignment="CENTER">
          <children>
             <VBox prefHeight="363.0" prefWidth="187.0">
                <HBox.margin>
-                  <Insets />
+                  <Insets left="25.0" />
                </HBox.margin>
-            </VBox>
-            <VBox fx:id="vbox" prefHeight="418.0" prefWidth="149.0" style="-fx-background-color: #C43C1F; -fx-background-radius: 40;">
                <children>
-                  <Button mnemonicParsing="false" onAction="#next_Imagen" prefHeight="31.0" prefWidth="60.0" text="Next">
+                  <VBox fx:id="vbox" prefHeight="418.0" prefWidth="149.0" style="-fx-background-color: #F4E0E0; -fx-background-radius: 40;">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#next_Imagen" prefHeight="25.0" prefWidth="77.0" text="Next">
+                           <VBox.margin>
+                              <Insets left="50.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <ImageView fx:id="nodo1" fitHeight="59.0" fitWidth="87.0" layoutX="50.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="60.0" top="20.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="nodo2" fitHeight="59.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="60.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="nodo3" fitHeight="59.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="60.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <ImageView fx:id="nodo4" fitHeight="59.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="60.0" top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Button mnemonicParsing="false" onAction="#previous_Imagen" prefHeight="25.0" prefWidth="77.0" text="Previous">
+                           <VBox.margin>
+                              <Insets left="50.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
                      <VBox.margin>
-                        <Insets left="40.0" top="10.0" />
+                        <Insets top="10.0" />
                      </VBox.margin>
-                  </Button>
-                  <ImageView fx:id="nodo1" fitHeight="59.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets left="40.0" top="10.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fx:id="nodo2" fitHeight="59.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets left="40.0" top="10.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fx:id="nodo3" fitHeight="59.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets left="40.0" top="10.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <ImageView fx:id="nodo4" fitHeight="59.0" fitWidth="87.0" pickOnBounds="true" preserveRatio="true">
-                     <VBox.margin>
-                        <Insets left="40.0" top="10.0" />
-                     </VBox.margin>
-                  </ImageView>
-                  <Button mnemonicParsing="false" onAction="#previous_Imagen" text="Previous">
-                     <VBox.margin>
-                        <Insets left="40.0" top="20.0" />
-                     </VBox.margin>
-                  </Button>
+                  </VBox>
                </children>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
             </VBox>
          </children>
          <BorderPane.margin>
@@ -100,12 +110,15 @@
             </HBox>
             <AnchorPane prefHeight="363.0" prefWidth="342.0">
                <children>
-                  <ImageView fx:id="fondo" fitHeight="283.0" fitWidth="273.0" layoutX="40.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="faceboceto" fitHeight="127.0" fitWidth="137.0" layoutX="183.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="eyesboceto" fitHeight="33.0" fitWidth="87.0" layoutX="208.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="mouthboceto" fitHeight="33.0" fitWidth="87.0" layoutX="208.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="eyebrowsboceto" fitHeight="33.0" fitWidth="87.0" layoutX="208.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="accesorriesboceto" fitHeight="33.0" fitWidth="87.0" layoutX="208.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="accesorriesboceto" fitHeight="33.0" fitWidth="87.0" layoutX="292.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
+                  <AnchorPane focusTraversable="true" layoutX="154.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
+                     <children>
+                        <ImageView fx:id="faceboceto" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="eyebrowsboceto" fitHeight="51.0" fitWidth="124.0" layoutX="72.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="eyesboceto" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="mouthboceto" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
                </children>
             </AnchorPane>
          </children>
