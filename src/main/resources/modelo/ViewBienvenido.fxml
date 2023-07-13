@@ -120,8 +120,10 @@
                      </children>
                   </AnchorPane>
                   <Button layoutX="311.0" layoutY="252.0" mnemonicParsing="false" onAction="#saveEmoji" prefHeight="26.0" prefWidth="50.0" text="Save" />
-                  <Button layoutX="154.0" layoutY="253.0" mnemonicParsing="false" onAction="#clear" text="Clear" />
+                  <Button layoutX="232.0" layoutY="253.0" mnemonicParsing="false" onAction="#clear" text="Clear" />
                   <Button layoutX="204.0" layoutY="295.0" mnemonicParsing="false" onAction="#emojiDatabse" prefWidth="100.0" text="Emojis" />
+                  <Button layoutX="146.0" layoutY="253.0" mnemonicParsing="false" onAction="#deleteSelection" text="Delete" />
+                  <Button layoutX="416.0" layoutY="52.0" mnemonicParsing="false" onAction="#guardarPredeterminado" text="Save Pred." />
                </children>
             </AnchorPane>
          </children>

@@ -41,33 +41,18 @@
                <children>
                   <VBox fx:id="vbox11" prefHeight="418.0" prefWidth="149.0" style="-fx-background-color: #F4E0E0; -fx-background-radius: 40;">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#next_emoji1" prefHeight="25.0" prefWidth="77.0" text="Next">
+                        <Button mnemonicParsing="false" onAction="#next_emojiL" prefHeight="25.0" prefWidth="77.0" text="Next">
                            <VBox.margin>
                               <Insets bottom="20.0" left="60.0" top="20.0" />
                            </VBox.margin>
                         </Button>
-                        <AnchorPane focusTraversable="true" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
-                           <children>
-                              <ImageView fx:id="faceboceto1" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="eyebrowsboceto1" fitHeight="51.0" fitWidth="124.0" layoutX="70.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="eyesboceto1" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="mouthboceto1" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="accesorriesboceto1" fitHeight="33.0" fitWidth="87.0" layoutX="79.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane focusTraversable="true" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
-                           <children>
-                              <ImageView fx:id="faceboceto2" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="eyebrowsboceto2" fitHeight="51.0" fitWidth="124.0" layoutX="70.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="eyesboceto2" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="mouthboceto2" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="accesorriesboceto2" fitHeight="33.0" fitWidth="87.0" layoutX="79.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
-                           </children>
+                        <AnchorPane fx:id="emojiL1" focusTraversable="true" onMouseClicked="#mainEmoji" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;" />
+                        <AnchorPane fx:id="emojiL2" focusTraversable="true" onMouseClicked="#mainEmoji" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
                         </AnchorPane>
-                        <Button mnemonicParsing="false" onAction="#previous_emoji1" prefHeight="25.0" prefWidth="77.0" text="Previous">
+                        <Button mnemonicParsing="false" onAction="#previous_emojiL" prefHeight="25.0" prefWidth="77.0" text="Previous">
                            <VBox.margin>
                               <Insets bottom="20.0" left="60.0" top="20.0" />
                            </VBox.margin>
@@ -92,33 +77,18 @@
                         <Insets top="10.0" />
                      </VBox.margin>
                      <children>
-                        <Button mnemonicParsing="false" onAction="#next_emoji1" prefHeight="25.0" prefWidth="77.0" text="Next">
+                        <Button mnemonicParsing="false" onAction="#next_emojiR" prefHeight="25.0" prefWidth="77.0" text="Next">
                            <VBox.margin>
                               <Insets bottom="20.0" left="60.0" top="20.0" />
                            </VBox.margin>
                         </Button>
-                        <AnchorPane focusTraversable="true" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
-                           <children>
-                              <ImageView fx:id="faceboceto11" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="eyebrowsboceto11" fitHeight="51.0" fitWidth="124.0" layoutX="70.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="eyesboceto11" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="mouthboceto11" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="accesorriesboceto11" fitHeight="33.0" fitWidth="87.0" layoutX="79.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
-                           </children>
+                        <AnchorPane fx:id="emojiR1" focusTraversable="true" onMouseClicked="#mainEmoji" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
                            <VBox.margin>
                               <Insets bottom="10.0" />
                            </VBox.margin>
                         </AnchorPane>
-                        <AnchorPane focusTraversable="true" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
-                           <children>
-                              <ImageView fx:id="faceboceto21" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="eyebrowsboceto21" fitHeight="51.0" fitWidth="124.0" layoutX="70.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="eyesboceto21" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="mouthboceto21" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
-                              <ImageView fx:id="accesorriesboceto21" fitHeight="33.0" fitWidth="87.0" layoutX="79.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
-                           </children>
-                        </AnchorPane>
-                        <Button mnemonicParsing="false" onAction="#previous_emoji1" prefHeight="25.0" prefWidth="77.0" text="Previous">
+                        <AnchorPane fx:id="emojiR2" focusTraversable="true" onMouseClicked="#mainEmoji" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;" />
+                        <Button mnemonicParsing="false" onAction="#previous_emojiR" prefHeight="25.0" prefWidth="77.0" text="Previous">
                            <VBox.margin>
                               <Insets bottom="20.0" left="60.0" top="20.0" />
                            </VBox.margin>

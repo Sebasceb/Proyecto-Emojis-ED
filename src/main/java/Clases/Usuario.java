@@ -45,7 +45,10 @@ public class Usuario implements Serializable {
         this.project.add(e);
     }
 
-    
+    @Override
+    public String toString(){
+        return "[ "+this.user+ " : "+this.password+" ]";
+    }
     
     
     @Override

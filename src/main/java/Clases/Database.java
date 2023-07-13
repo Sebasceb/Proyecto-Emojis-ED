@@ -32,6 +32,7 @@ public class Database {
     public static LCDE<Usuario> getListaUsuarios() {
         return listaUsuarios;
     }
+    
      
     public static boolean addUser(Usuario u){
         if(u==null || u.getUser()==null || u.getPassword()==null || listaUsuarios.contains(u))
@@ -225,6 +226,9 @@ public class Database {
         }catch (IOException | ClassNotFoundException ex) {
             System.out.println(ex.getMessage());
         }
+        for(Usuario u:listaUsuarios){
+            System.out.println(u);
+        }
     }
     
     public static void llenarLCDEEmoji(){
@@ -235,6 +239,9 @@ public class Database {
             leyendoFichero.close();
         }catch (IOException | ClassNotFoundException ex) {
             System.out.println(ex.getMessage());
+        }
+        for(Emoji e: listaEmoji){
+            System.out.println(e);
         }
     }
      

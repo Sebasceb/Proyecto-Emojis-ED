@@ -10,7 +10,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import static modelo.ViewBienvenidoController.listaNodos;
 
 /**
  * FXML Controller class
@@ -24,26 +27,6 @@ public class EmojisCreadosController implements Initializable {
     @FXML
     private VBox vbox1;
     @FXML
-    private ImageView faceboceto1;
-    @FXML
-    private ImageView eyebrowsboceto1;
-    @FXML
-    private ImageView eyesboceto1;
-    @FXML
-    private ImageView mouthboceto1;
-    @FXML
-    private ImageView accesorriesboceto1;
-    @FXML
-    private ImageView faceboceto2;
-    @FXML
-    private ImageView eyebrowsboceto2;
-    @FXML
-    private ImageView eyesboceto2;
-    @FXML
-    private ImageView mouthboceto2;
-    @FXML
-    private ImageView accesorriesboceto2;
-    @FXML
     private ImageView faceboceto;
     @FXML
     private ImageView eyebrowsboceto;
@@ -54,25 +37,13 @@ public class EmojisCreadosController implements Initializable {
     @FXML
     private ImageView accesorriesboceto;
     @FXML
-    private ImageView faceboceto11;
+    private AnchorPane emojiL1;
     @FXML
-    private ImageView eyebrowsboceto11;
+    private AnchorPane emojiL2;
     @FXML
-    private ImageView eyesboceto11;
+    private AnchorPane emojiR1;
     @FXML
-    private ImageView mouthboceto11;
-    @FXML
-    private ImageView accesorriesboceto11;
-    @FXML
-    private ImageView faceboceto21;
-    @FXML
-    private ImageView eyebrowsboceto21;
-    @FXML
-    private ImageView eyesboceto21;
-    @FXML
-    private ImageView mouthboceto21;
-    @FXML
-    private ImageView accesorriesboceto21;
+    private AnchorPane emojiR2;
 
     /**
      * Initializes the controller class.
@@ -83,11 +54,27 @@ public class EmojisCreadosController implements Initializable {
     }    
 
     @FXML
-    private void next_emoji1(ActionEvent event) {
+    private void next_emojiL(ActionEvent event) {
     }
 
     @FXML
-    private void previous_emoji1(ActionEvent event) {
+    private void previous_emojiL(ActionEvent event) {
+    }
+
+    @FXML
+    private void next_emojiR(ActionEvent event) {
+    }
+
+    @FXML
+    private void previous_emojiR(ActionEvent event) {
+    }
+
+    @FXML
+    private void mainEmoji(MouseEvent event) {
+    }
+    
+    public void llenarEmjois(){
+        
     }
 
     
