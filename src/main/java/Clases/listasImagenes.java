@@ -20,6 +20,7 @@ public class listasImagenes {
      public static  LCDE<eyebrows> listaEyesBrows;
      public static  LCDE<accessories> listaAccesories;
      public static  LCDE<mouth> listaMouth;
+     public static LCDE<Emoji> listaEmoji;
      
      
      

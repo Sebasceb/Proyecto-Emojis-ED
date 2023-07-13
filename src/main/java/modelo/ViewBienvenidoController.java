@@ -6,6 +6,7 @@ package modelo;
  */
 
 
+import Clases.Emoji;
 import Clases.LCDE;
 import Clases.accessories;
 import Clases.eyebrows;
@@ -18,8 +19,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.net.URI;
 import java.net.URL;
 import java.nio.file.Paths;
@@ -28,6 +32,8 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -39,6 +45,7 @@ import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -55,8 +62,6 @@ public class ViewBienvenidoController implements Initializable {
     private ImageView nodo3;   
     @FXML
     private ImageView nodo4;
-    @FXML
-    private ImageView fondo;
     
     public static LCDE<ImageView> listaNodos= new LCDE<>();
     @FXML
@@ -76,6 +81,18 @@ public class ViewBienvenidoController implements Initializable {
     private ImageView eyebrowsboceto;
     @FXML
     private ImageView accesorriesboceto;
+    @FXML
+    private Button btnEyes;
+    @FXML
+    private Button btnFace;
+    @FXML
+    private Button btnEyesBrows;
+    @FXML
+    private Button btnAccesorios;
+    @FXML
+    private Button btnMouth;
+  
+ 
    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -376,6 +393,64 @@ public void AggnodoyAciones(){
         nodo4.setImage(imagen4);
     }
 
-     }
+   
+
+    @FXML
+    private void SaveEmoji(MouseEvent event) {
+        Group group = new Group();
+        group.getChildren().addAll(faceboceto, eyebrowsboceto, eyesboceto,accesorriesboceto,mouthboceto);
+
+        // Crear la escena y agregar el Group
+        Scene scene = new Scene(group, 400, 300);
+
+        // Configurar y mostrar la ventana
+        Stage stage=  new Stage();
+        stage.setScene(scene);
+        stage.setTitle("ImageView Group Example");
+        stage.show();
+    }
+
+    @FXML
+    private void saveEmoji(ActionEvent event) {
+        Group group = new Group();
+        group.getChildren().addAll(faceboceto, eyebrowsboceto, eyesboceto,accesorriesboceto,mouthboceto);
+        Emoji emoji= new Emoji(group);
+        listasImagenes.listaEmoji.add(emoji);
+        try {
+         
+
+            ObjectOutputStream escribiendoFichero = new ObjectOutputStream( 
+            new FileOutputStream("objetos.dat") );
+            escribiendoFichero.writeObject(emoji);
+            escribiendoFichero.close();
+
+           
+
+//            ObjectInputStream leyendoFichero = new ObjectInputStream( 
+//            new FileInputStream("objetos.dat") );
+//           
+
+     
+        
+            
+        }catch (Exception e) {
+            System.out.println( e.getMessage() );
+        }
+        // Crear la escena y agregar el Group
+        Scene scene = new Scene(group, 400, 300);
+
+        // Configurar y mostrar la ventana
+        Stage stage=  new Stage();
+        stage.setScene(scene);
+        stage.setTitle("ImageView Group Example");
+        stage.show();
+    }
+       
+    
+    }
+
+    
+
+     
     
 

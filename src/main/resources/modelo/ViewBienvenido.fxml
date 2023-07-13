@@ -108,7 +108,7 @@
                   <Insets left="20.0" />
                </VBox.margin>
             </HBox>
-            <AnchorPane prefHeight="363.0" prefWidth="342.0">
+            <AnchorPane onDragDetected="#SaveEmoji" prefHeight="363.0" prefWidth="342.0">
                <children>
                   <ImageView fx:id="accesorriesboceto" fitHeight="33.0" fitWidth="87.0" layoutX="292.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true" />
                   <AnchorPane focusTraversable="true" layoutX="154.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
@@ -119,6 +119,9 @@
                         <ImageView fx:id="mouthboceto" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </AnchorPane>
+                  <Button layoutX="78.0" layoutY="250.0" mnemonicParsing="false" onAction="#saveEmoji" prefHeight="26.0" prefWidth="50.0" text="Save" />
+                  <Button layoutX="228.0" layoutY="250.0" mnemonicParsing="false" text="Delete" />
+                  <Button layoutX="353.0" layoutY="250.0" mnemonicParsing="false" text="Button" />
                </children>
             </AnchorPane>
          </children>
