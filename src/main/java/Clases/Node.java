@@ -4,13 +4,14 @@
  */
 package Clases;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author Usuario
  */
-public class Node<E> {
+public class Node<E> implements Serializable{
     
      private E content;
     private Node<E> next;

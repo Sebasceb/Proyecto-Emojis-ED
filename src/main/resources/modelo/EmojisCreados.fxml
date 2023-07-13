@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="619.0" prefWidth="974.0" style="-fx-background-color: #9AFFD9;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.EmojisCreadosController">
+   <center>
+      <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <AnchorPane focusTraversable="true" layoutX="200.0" layoutY="73.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
+               <children>
+                  <ImageView fx:id="faceboceto" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="eyebrowsboceto" fitHeight="51.0" fitWidth="124.0" layoutX="70.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="eyesboceto" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="mouthboceto" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="accesorriesboceto" fitHeight="33.0" fitWidth="87.0" layoutX="79.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <HBox prefHeight="100.0" prefWidth="974.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea prefHeight="200.0" prefWidth="200.0" text="Emojis Predeterminados" />
+            <TextArea layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" text="Emojis creados" translateX="200.0" />
+            <TextArea layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" text="Emojis de Usuario" translateX="365.0" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="363.0" prefWidth="187.0">
+               <children>
+                  <VBox fx:id="vbox11" prefHeight="418.0" prefWidth="149.0" style="-fx-background-color: #F4E0E0; -fx-background-radius: 40;">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#next_emoji1" prefHeight="25.0" prefWidth="77.0" text="Next">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="60.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <AnchorPane focusTraversable="true" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
+                           <children>
+                              <ImageView fx:id="faceboceto1" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="eyebrowsboceto1" fitHeight="51.0" fitWidth="124.0" layoutX="70.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="eyesboceto1" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="mouthboceto1" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="accesorriesboceto1" fitHeight="33.0" fitWidth="87.0" layoutX="79.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane focusTraversable="true" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
+                           <children>
+                              <ImageView fx:id="faceboceto2" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="eyebrowsboceto2" fitHeight="51.0" fitWidth="124.0" layoutX="70.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="eyesboceto2" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="mouthboceto2" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="accesorriesboceto2" fitHeight="33.0" fitWidth="87.0" layoutX="79.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </AnchorPane>
+                        <Button mnemonicParsing="false" onAction="#previous_emoji1" prefHeight="25.0" prefWidth="77.0" text="Previous">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="60.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <right>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="363.0" prefWidth="187.0">
+               <children>
+                  <VBox fx:id="vbox1" prefHeight="418.0" prefWidth="149.0" style="-fx-background-color: #F4E0E0; -fx-background-radius: 40;">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#next_emoji1" prefHeight="25.0" prefWidth="77.0" text="Next">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="60.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                        <AnchorPane focusTraversable="true" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
+                           <children>
+                              <ImageView fx:id="faceboceto11" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="eyebrowsboceto11" fitHeight="51.0" fitWidth="124.0" layoutX="70.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="eyesboceto11" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="mouthboceto11" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="accesorriesboceto11" fitHeight="33.0" fitWidth="87.0" layoutX="79.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </AnchorPane>
+                        <AnchorPane focusTraversable="true" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: transparent; -fx-border-style: dashed; -fx-border-radius: 10; -fx-border-width: 2;">
+                           <children>
+                              <ImageView fx:id="faceboceto21" fitHeight="127.0" fitWidth="137.0" layoutX="32.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="eyebrowsboceto21" fitHeight="51.0" fitWidth="124.0" layoutX="70.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="eyesboceto21" fitHeight="45.0" fitWidth="87.0" layoutX="75.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="mouthboceto21" fitHeight="40.0" fitWidth="87.0" layoutX="79.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="accesorriesboceto21" fitHeight="33.0" fitWidth="87.0" layoutX="79.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </AnchorPane>
+                        <Button mnemonicParsing="false" onAction="#previous_emoji1" prefHeight="25.0" prefWidth="77.0" text="Previous">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="60.0" top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>

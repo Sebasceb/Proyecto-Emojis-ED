@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 40;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.ViewLoginController">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 40;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modelo.ViewLoginController">
    <children>
       <VBox alignment="CENTER" prefWidth="427.0" style="-fx-background-color: #F7B026; -fx-background-radius: 10;" HBox.hgrow="ALWAYS">
          <opaqueInsets>
@@ -51,12 +51,20 @@
                         <Font size="18.0" />
                      </font>
                   </PasswordField>
-                  <Button fx:id="btnIngresar" alignment="CENTER" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#evenAction" style="-fx-background-radius: 10;" text="Ingresar">
+                  <Button fx:id="btnIngresar" alignment="CENTER" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#ingresar" style="-fx-background-radius: 10;" text="Ingresar">
                      <font>
                         <Font name="Franklin Gothic Heavy" size="18.0" />
                      </font>
                      <VBox.margin>
                         <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnRegistrar" alignment="CENTER" contentDisplay="RIGHT" layoutX="10.0" layoutY="188.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#registrar" style="-fx-background-radius: 10;" text="Registrar Usuario">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
                      </VBox.margin>
                   </Button>
                </children>

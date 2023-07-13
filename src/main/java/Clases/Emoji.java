@@ -12,18 +12,18 @@ import javafx.scene.Group;
  * @author Usuario
  */
 public class Emoji implements Serializable{
-    Group grupo;
+    Group group;
 
     public Emoji(Group emoji) {
-        this.grupo = emoji;
+        this.group = emoji;
     }
 
     public Group getGroup() {
-        return grupo;
+        return group;
     }
 
-    public void setGroup(Group emoji) {
-        this.grupo = emoji;
+    public void setGroup(Group group) {
+        this.group = group;
     }
     
     

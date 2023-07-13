@@ -12,7 +12,7 @@ import Clases.accessories;
 import Clases.eyebrows;
 import Clases.eyes;
 import Clases.face;
-import Clases.listasImagenes;
+import Clases.Database;
 import Clases.mouth;
 import Clases.opciones_Emoji;
 import java.io.BufferedReader;
@@ -99,7 +99,7 @@ public class ViewBienvenidoController implements Initializable {
         
         
     
-        AggnodoyAciones();
+       AggnodoyAciones();
        
        ImagenesComienzo();
         //aggFondo_Emoji();
@@ -126,7 +126,7 @@ public void asignarEmojis_AlaLista(){
     int contador=1;
     switch (opcion) {
         case face:
-            List<face> listacaras= listasImagenes.listaFace;
+            List<face> listacaras= Database.listaFace;
             
             for (ImageView im:listaNodos ){
                 im.setImage(listacaras.get(contador).getImagenFace());
@@ -134,7 +134,7 @@ public void asignarEmojis_AlaLista(){
             }
              break;
         case eyes:
-            List<eyes> listaeyes= listasImagenes.listaEyes;
+            List<eyes> listaeyes= Database.listaEyes;
             
             for (ImageView im:listaNodos ){
                 im.setImage(listaeyes.get(contador).getImagenEyes());
@@ -142,7 +142,7 @@ public void asignarEmojis_AlaLista(){
             }
             break;
         case eyebrows:
-            List<eyebrows> listaeyesbrows= listasImagenes.listaEyesBrows;
+            List<eyebrows> listaeyesbrows= Database.listaEyesBrows;
             
             for (ImageView im:listaNodos ){
                 im.setImage(listaeyesbrows.get(contador).getImagenEyesBrows());
@@ -150,7 +150,7 @@ public void asignarEmojis_AlaLista(){
             }
             break;
         case accessories:
-            List<accessories> listaAccessories= listasImagenes.listaAccesories;
+            List<accessories> listaAccessories= Database.listaAccesories;
             
             for (ImageView im:listaNodos ){
                 im.setImage(listaAccessories.get(contador).getImagenAccesories());
@@ -158,7 +158,7 @@ public void asignarEmojis_AlaLista(){
             }
             break;
         case mouth: 
-            List<mouth> listaMout= listasImagenes.listaMouth;
+            List<mouth> listaMout= Database.listaMouth;
             
             for (ImageView im:listaNodos ){
                 im.setImage(listaMout.get(contador).getImagenMouth());
@@ -204,7 +204,7 @@ public void asignarEmojis_AlaLista(){
             for (ImageView im:listaNodos ){
                 ima=im.getImage();
                 f= new face(nom, ima);
-                im.setImage(listasImagenes.listaFace.obtenerSiguiente(f).getImagenFace());
+                im.setImage(Database.listaFace.obtenerSiguiente(f).getImagenFace());
                // faceboceto.setImage(ima);
             }
              break;
@@ -213,7 +213,7 @@ public void asignarEmojis_AlaLista(){
             for (ImageView im:listaNodos ){
                 ima=im.getImage();
                 e= new eyes(nom, ima);
-                im.setImage(listasImagenes.listaEyes.obtenerSiguiente(e).getImagenEyes());
+                im.setImage(Database.listaEyes.obtenerSiguiente(e).getImagenEyes());
             }
             break;
         case eyebrows:
@@ -221,7 +221,7 @@ public void asignarEmojis_AlaLista(){
             for (ImageView im:listaNodos ){
                 ima=im.getImage();
                 ey= new eyebrows(nom, ima);
-                im.setImage(listasImagenes.listaEyesBrows.obtenerSiguiente(ey).getImagenEyesBrows());
+                im.setImage(Database.listaEyesBrows.obtenerSiguiente(ey).getImagenEyesBrows());
             }
             break;
         case accessories:
@@ -229,7 +229,7 @@ public void asignarEmojis_AlaLista(){
             for (ImageView im:listaNodos ){
                 ima=im.getImage();
                 a= new accessories(nom, ima);
-                im.setImage(listasImagenes.listaAccesories.obtenerSiguiente(a).getImagenAccesories());
+                im.setImage(Database.listaAccesories.obtenerSiguiente(a).getImagenAccesories());
             }
             break;
         case mouth: 
@@ -237,7 +237,7 @@ public void asignarEmojis_AlaLista(){
             for (ImageView im:listaNodos ){
                 ima=im.getImage();
                 m= new mouth(nom, ima);
-                im.setImage(listasImagenes.listaMouth.obtenerSiguiente(m).getImagenMouth());
+                im.setImage(Database.listaMouth.obtenerSiguiente(m).getImagenMouth());
             }
             break;
             
@@ -252,8 +252,8 @@ public void asignarEmojis_AlaLista(){
     
     @FXML
     private void previous_Imagen(ActionEvent event) {
-        Image ima;
-        String nom=" ";
+       Image ima;
+       String nom=" ";
        ImageView in;
        switch (opcion) {
         case face:
@@ -263,7 +263,7 @@ public void asignarEmojis_AlaLista(){
                     in= listaNodos.get(i);
                     ima= in.getImage();
                     f= new face(nom, ima);
-                    in.setImage(listasImagenes.listaFace.obtenerPrevio(f).getImagenFace());
+                    in.setImage(Database.listaFace.obtenerPrevio(f).getImagenFace());
        }
    
              break;
@@ -273,7 +273,7 @@ public void asignarEmojis_AlaLista(){
                     in= listaNodos.get(i);
                     ima= in.getImage();
                     e= new eyes(nom, ima);
-                    in.setImage(listasImagenes.listaEyes.obtenerPrevio(e).getImagenEyes());
+                    in.setImage(Database.listaEyes.obtenerPrevio(e).getImagenEyes());
        }
             break;
         case eyebrows:
@@ -282,7 +282,7 @@ public void asignarEmojis_AlaLista(){
                     in= listaNodos.get(i);
                     ima= in.getImage();
                     ey= new eyebrows(nom, ima);
-                    in.setImage(listasImagenes.listaEyesBrows.obtenerPrevio(ey).getImagenEyesBrows());
+                    in.setImage(Database.listaEyesBrows.obtenerPrevio(ey).getImagenEyesBrows());
        }
             break;
         case accessories:
@@ -291,7 +291,7 @@ public void asignarEmojis_AlaLista(){
                     in= listaNodos.get(i);
                     ima= in.getImage();
                     a= new accessories(nom, ima);
-                    in.setImage(listasImagenes.listaAccesories.obtenerPrevio(a).getImagenAccesories());
+                    in.setImage(Database.listaAccesories.obtenerPrevio(a).getImagenAccesories());
        }
             break;
         case mouth: 
@@ -300,7 +300,7 @@ public void asignarEmojis_AlaLista(){
                     in= listaNodos.get(i);
                     ima= in.getImage();
                     m= new mouth(nom, ima);
-                    in.setImage(listasImagenes.listaMouth.obtenerPrevio(m).getImagenMouth());
+                    in.setImage(Database.listaMouth.obtenerPrevio(m).getImagenMouth());
        }
             break;
             
@@ -381,7 +381,7 @@ public void AggnodoyAciones(){
     
     public void ImagenesComienzo(){
         
-        List<face> listacaras= listasImagenes.listaFace;
+        List<face> listacaras= Database.listaFace;
         
         Image imagen1= listacaras.get(1).getImagenFace();
         nodo1.setImage(imagen1);
@@ -396,54 +396,22 @@ public void AggnodoyAciones(){
    
 
     @FXML
-    private void SaveEmoji(MouseEvent event) {
-        Group group = new Group();
-        group.getChildren().addAll(faceboceto, eyebrowsboceto, eyesboceto,accesorriesboceto,mouthboceto);
-
-        // Crear la escena y agregar el Group
-        Scene scene = new Scene(group, 400, 300);
-
-        // Configurar y mostrar la ventana
-        Stage stage=  new Stage();
-        stage.setScene(scene);
-        stage.setTitle("ImageView Group Example");
-        stage.show();
-    }
-
-    @FXML
-    private void saveEmoji(ActionEvent event) {
+    private void saveEmoji(ActionEvent event) throws IOException {
         Group group = new Group();
         group.getChildren().addAll(faceboceto, eyebrowsboceto, eyesboceto,accesorriesboceto,mouthboceto);
         Emoji emoji= new Emoji(group);
-        listasImagenes.listaEmoji.add(emoji);
-        try {
-         
-
-            ObjectOutputStream escribiendoFichero = new ObjectOutputStream( 
-            new FileOutputStream("objetos.dat") );
-            escribiendoFichero.writeObject(emoji);
-            escribiendoFichero.close();
-
-           
-
-//            ObjectInputStream leyendoFichero = new ObjectInputStream( 
-//            new FileInputStream("objetos.dat") );
-//           
-
-     
+        Database.addEmoji(emoji);
         
-            
-        }catch (Exception e) {
-            System.out.println( e.getMessage() );
-        }
-        // Crear la escena y agregar el Group
-        Scene scene = new Scene(group, 400, 300);
+        App.setRoot("ViewBienvenido");
+    }
 
-        // Configurar y mostrar la ventana
-        Stage stage=  new Stage();
-        stage.setScene(scene);
-        stage.setTitle("ImageView Group Example");
-        stage.show();
+    @FXML
+    private void emojiDatabse(ActionEvent event) {
+    }
+
+    @FXML
+    private void clear(ActionEvent event) throws IOException {
+        App.setRoot("ViewBienvenido");
     }
        
     
