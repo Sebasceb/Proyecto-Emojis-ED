@@ -13,12 +13,12 @@ import java.io.Serializable;
 public class Usuario implements Serializable {
     private String user;
     private String password;
-    private LCDE<Emoji> project;
+//    private LCDE<Emoji> project;
 
     public Usuario(String user, String password) {
         this.user = user;
         this.password = password;
-        this.project= new LCDE<Emoji>();
+//        this.project= new LCDE<Emoji>();
     }
 
     public String getUser() {
@@ -33,16 +33,16 @@ public class Usuario implements Serializable {
         return password;
     }
 
-    public LCDE<Emoji> getProject() {
-        return project;
-    }
-
-    public void setProject(LCDE<Emoji> project) {
-        this.project = project;
-    }
-    
+//    public LCDE<Emoji> getProject() {
+//        return project;
+//    }
+//
+//    public void setProject(LCDE<Emoji> project) {
+//        this.project = project;
+//    }
+//    
     public void addEmoji(Emoji e){
-        this.project.add(e);
+//        this.project.add(e);
     }
 
     @Override

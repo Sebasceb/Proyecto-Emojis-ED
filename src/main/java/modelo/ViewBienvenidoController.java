@@ -13,39 +13,32 @@ import Clases.eyebrows;
 import Clases.eyes;
 import Clases.face;
 import Clases.Database;
-import static Clases.Database.listaUsuarios;
 import Clases.mouth;
 import Clases.opciones_Emoji;
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.URI;
 import java.net.URL;
-import java.nio.file.Paths;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Group;
-import javafx.scene.Scene;
+import javafx.scene.SnapshotParameters;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundImage;
-import javafx.scene.layout.BackgroundPosition;
-import javafx.scene.layout.BackgroundRepeat;
-import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 /**
@@ -398,17 +391,10 @@ public class ViewBienvenidoController implements Initializable {
 
     @FXML
     private void saveEmoji(ActionEvent event) throws IOException {
-        Group group = new Group();
-        group.getChildren().addAll(faceboceto, eyebrowsboceto, eyesboceto,accesorriesboceto,mouthboceto);
-        Emoji emoji= new Emoji(group);
-        Database.addEmoji(emoji);
-        
-        App.setRoot("ViewBienvenido");
+
+
     }
 
-    @FXML
-    private void emojiDatabse(ActionEvent event) {
-    }
 
     @FXML
     private void clear(ActionEvent event) throws IOException {
@@ -454,6 +440,64 @@ public class ViewBienvenidoController implements Initializable {
         }
         App.setRoot("ViewBienvenido");
     }
+
+    @FXML
+    private void cargarImagen(ActionEvent event) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Cargar Imagen");
+        alert.setHeaderText(null);
+        alert.setContentText("Va a subir una imagen de tipo: " + opcion.name());
+        alert.showAndWait();
+        String carpeta="";
+        switch (opcion) {
+            case face:
+                carpeta="faces";
+                break;
+            case eyes:
+                carpeta="eyes";
+                break;
+            case eyebrows:
+                carpeta="eyebrows";
+                break;
+            case accessories:
+                carpeta="accessories";
+                break;
+            case mouth:
+                carpeta="mouth";
+                break;
+            default:
+                System.out.println("Erroooooor");
+        }
+        
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Cargar Imagen");
+
+        File initialDirectory = new File(System.getProperty("user.home"));
+        fileChooser.setInitialDirectory(initialDirectory);
+        
+        FileChooser.ExtensionFilter imageFilter = new FileChooser.ExtensionFilter("Image Files", "*.jpg", "*.png", "*.jpeg");
+        fileChooser.getExtensionFilters().add(imageFilter);
+        
+        Stage stage = new Stage();
+        File selectedFile = fileChooser.showOpenDialog(stage);
+        
+        if (selectedFile != null) {
+            try {
+                String destinationPath = "src/main/resources/images/"+carpeta+"/" + selectedFile.getName();
+                Path source = selectedFile.toPath();
+                Path destination = Path.of(destinationPath);
+                Files.copy(source, destination, StandardCopyOption.REPLACE_EXISTING);
+
+                System.out.println("Photo uploaded successfully.");
+            } catch (IOException e) {
+                System.out.println("Error uploading photo: " + e.getMessage());
+            }
+        }
+        
+        Database.CargarListas();
+        App.setRoot("ViewBienvenido");
+    }
+    
        
     
 }

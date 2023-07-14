@@ -84,7 +84,7 @@ public class Database {
     public  static void  llenarLCDEface(){
        listaFace= new LCDE<face>();
       
-        File folder = new File("src\\main\\resources\\images\\faces");
+        File folder = new File("src/main/resources/images/faces");
         File[] files = folder.listFiles();
         
         if (files != null) {
@@ -95,7 +95,7 @@ public class Database {
                     Image im;
                     face f;
                     try {
-                        archi = new FileInputStream("src\\main\\resources\\images\\faces\\"+nom);
+                        archi = new FileInputStream("src/main/resources/images/faces/"+nom);
                         im= new Image(archi);
                         f = new face(nom, im);
                         listaFace.add(f);
@@ -112,7 +112,7 @@ public class Database {
     public  static void  llenarLCDEEyes(){
        listaEyes= new LCDE<eyes>();
       
-        File folder = new File("src\\main\\resources\\images\\eyes");
+        File folder = new File("src/main/resources/images/eyes");
         File[] files = folder.listFiles();
         
         if (files != null) {
@@ -123,7 +123,7 @@ public class Database {
                     Image im;
                     eyes e;
                     try {
-                        archi = new FileInputStream("src\\main\\resources\\images\\eyes\\"+nom);
+                        archi = new FileInputStream("src/main/resources/images/eyes/"+nom);
                         im= new Image(archi);
                         e = new eyes(nom, im);
                         listaEyes.add(e);
@@ -139,7 +139,7 @@ public class Database {
     public  static void  llenarLCDEEyesBrows(){
        listaEyesBrows= new LCDE<eyebrows>();
       
-        File folder = new File("src\\main\\resources\\images\\eyebrows");
+        File folder = new File("src/main/resources/images/eyebrows");
         File[] files = folder.listFiles();
         
         if (files != null) {
@@ -150,7 +150,7 @@ public class Database {
                     Image im;
                     eyebrows e;
                     try {
-                        archi = new FileInputStream("src\\main\\resources\\images\\eyebrows\\"+nom);
+                        archi = new FileInputStream("src/main/resources/images/eyebrows/"+nom);
                         im= new Image(archi);
                         e = new eyebrows(nom, im);
                         listaEyesBrows.add(e);
@@ -166,7 +166,7 @@ public class Database {
     public  static void  llenarLCDEAccessories(){
        listaAccesories= new LCDE<accessories>();
       
-        File folder = new File("src\\main\\resources\\images\\accessories");
+        File folder = new File("src/main/resources/images/accessories");
         File[] files = folder.listFiles();
         
         if (files != null) {
@@ -177,7 +177,7 @@ public class Database {
                     Image im;
                     accessories e;
                     try {
-                        archi = new FileInputStream("src\\main\\resources\\images\\accessories\\"+nom);
+                        archi = new FileInputStream("src/main/resources/images/accessories/"+nom);
                         im= new Image(archi);
                         e = new accessories(nom, im);
                         listaAccesories.add(e);
@@ -193,7 +193,7 @@ public class Database {
     public  static void  llenarLCDEMouth(){
        listaMouth= new LCDE<mouth>();
       
-        File folder = new File("src\\main\\resources\\images\\mouth");
+        File folder = new File("src/main/resources/images/mouth");
         File[] files = folder.listFiles();
         
         if (files != null) {
@@ -204,7 +204,7 @@ public class Database {
                     Image im;
                     mouth e;
                     try {
-                        archi = new FileInputStream("src\\main\\resources\\images\\mouth\\"+nom);
+                        archi = new FileInputStream("src/main/resources/images/mouth/"+nom);
                         im= new Image(archi);
                         e = new mouth(nom, im);
                         listaMouth.add(e);

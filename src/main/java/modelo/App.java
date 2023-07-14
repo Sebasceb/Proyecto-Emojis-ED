@@ -1,6 +1,5 @@
 package modelo;
 
-import Clases.face;
 import Clases.Database;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.List;
 
 /**
  * JavaFX App
